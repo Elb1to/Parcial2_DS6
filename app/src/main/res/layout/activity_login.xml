@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="35dp"
+        android:text="Universidad Tecnologica \n de Panamá \n Facultad de Sistemas"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:text="Nuevo Sistema de matricula"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/login_utp_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/login_subtitle"
+        android:layout_alignStart="@+id/login_title"
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/logo_utp_1_300" />
+
+    <ImageView
+        android:id="@+id/login_user_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/login_utp_image"
+        android:layout_marginBottom="60dp"
+        android:layout_toStartOf="@+id/login_subtitle"
+        android:src="@drawable/user_icon" />
+
+    <ImageView
+        android:id="@+id/login_fisc_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/login_subtitle"
+        android:layout_alignEnd="@+id/login_title"
+        android:src="@drawable/fisc_logo" />
+
+    <EditText
+        android:id="@+id/login_cedula_txt"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_utp_image"
+        android:layout_marginBottom="55dp"
+        android:layout_toRightOf="@+id/login_user_image"
+        android:hint="Cedula"
+        android:inputType="text"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/login_password_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/login_cedula_txt"
+        android:layout_toStartOf="@+id/login_subtitle"
+        android:src="@drawable/password_icon" />
+
+    <EditText
+        android:id="@+id/login_password_txt"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_cedula_txt"
+        android:layout_toRightOf="@+id/login_password_icon"
+        android:hint="Contrasena"
+        android:inputType="textPassword"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/login_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/teal_200"
+        android:onClick="processLogin"
+        android:text="INGRESAR" />
+
+</RelativeLayout>

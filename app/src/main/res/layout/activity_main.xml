@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_get_cedula"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/main_get_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:text="Universidad Tecnologica \n de Panamá \n Facultad de Sistemas"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/main_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:text=" Seleccione su Perfil"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/utp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/main_subtitle"
+        android:layout_alignStart="@+id/main_title"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo_utp_1_300" />
+
+    <ImageView
+        android:id="@+id/fisc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/main_subtitle"
+        android:layout_alignEnd="@+id/main_title"
+        android:src="@drawable/fisc_logo" />
+
+    <!--Radios-->
+    <RadioGroup
+        android:id="@+id/main_rgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fisc"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/main_student_rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Sitio de Estudiante"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/main_siu_rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sitio de Estudiante SIU"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/main_professor_rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sitio de Profesor"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_rgroup"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/teal_200"
+        android:onClick="selectProfileOption"
+        android:text="Entrar" />
+
+</RelativeLayout>
