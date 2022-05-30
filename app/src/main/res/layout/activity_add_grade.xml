@@ -10,7 +10,7 @@
     <!--    Miguel San Martín 8-960-2224-->
 
     <TextView
-        android:id="@+id/grades_title"
+        android:id="@+id/add_grades_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TITLE"
@@ -18,18 +18,17 @@
         android:textSize="28sp" />
 
     <Button
-        android:id="@+id/grades_add_button"
+        android:id="@+id/add_grades_save_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/grades_title"
-        android:text="AGREGAR NOTAS"
-        android:visibility="invisible" />
+        android:layout_below="@+id/add_grades_title"
+        android:text="GUARDAR NOTAS" />
 
     <GridView
-        android:id="@+id/grid"
+        android:id="@+id/add_grades_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/grades_add_button"
+        android:layout_below="@+id/add_grades_save_button"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:verticalSpacing="15dp" />

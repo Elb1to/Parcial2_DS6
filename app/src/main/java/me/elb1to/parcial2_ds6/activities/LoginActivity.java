@@ -23,6 +23,7 @@ import me.elb1to.parcial2_ds6.impl.User;
 public class LoginActivity extends AppCompatActivity {
 
     EditText cedula, password;
+    public static List<User> users = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private List<User> convertFileToList() {
-        List<User> users = new ArrayList<>();
         try {
             String line = new BufferedReader(new InputStreamReader(openFileInput("credentials.txt"))).readLine();
             String[] usersArray = line.split("\\$");
@@ -87,5 +87,16 @@ public class LoginActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, "Error" + e.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    // Get user by cedula
+    public static User getUserByCedula(String ced) {
+        for (User user : users) {
+            if (user.getCedula().equals(ced)) {
+                return user;
+            }
+        }
+
+        return null;
     }
 }

@@ -1,11 +1,12 @@
 package me.elb1to.parcial2_ds6.activities;
 
+import static me.elb1to.parcial2_ds6.activities.LoginActivity.getUserByCedula;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
@@ -20,35 +21,24 @@ import me.elb1to.parcial2_ds6.impl.Grade;
 import me.elb1to.parcial2_ds6.impl.GradeGrid;
 import me.elb1to.parcial2_ds6.impl.User;
 
-public class GradesActivity extends AppCompatActivity {
+public class AddGradeActivity extends AppCompatActivity {
 
     GridView gridView;
     TextView title;
 
-    User user = LoginActivity.users.get(0);
+    User user = getUserByCedula("8-970-1354");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grades);
-
-        Button gradesButton = (Button) findViewById(R.id.grades_add_button);
-        gradesButton.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), AddGradeActivity.class);
-            startActivity(intent);
-        });
-
-        if (getIntent().getStringExtra("cedula").equals("1-234-5678")) {
-            gradesButton.setVisibility(View.VISIBLE);
-        }
-
         initializeControllers();
     }
 
     private void initializeControllers() {
         gridView = findViewById(R.id.grid);
         title = findViewById(R.id.grades_title);
-        title.setText(MessageFormat.format("Bienvenido {0} \n\n Su Historial de Notas es ", getIntent().getStringExtra("nombre")));
+        title.setText(MessageFormat.format("Historial de Notas de ", getIntent().getStringExtra("nombre")));
 
         List<String> courses = user.getGrades().stream().map(Grade::getCourse).collect(Collectors.toList());
         List<Integer> icons = user.getGrades().stream().map(Grade::getCourseIcon).collect(Collectors.toList());

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Parcial2_DS6">
         <activity
+            android:name=".activities.AddGradeActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.GradesActivity"
             android:exported="false" />
         <activity

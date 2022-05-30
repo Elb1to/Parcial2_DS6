@@ -8,23 +8,25 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import me.elb1to.parcial2_ds6.R;
 
 public class GradeGrid extends BaseAdapter {
 
     private final Context context;
-    private final String[] web;
-    private final int[] imageId;
+    private final List<String> courseName;
+    private final List<Integer> courseIcon;
 
-    public GradeGrid(Context c, String[] web, int[] imageId) {
+    public GradeGrid(Context c, List<String> courseName, List<Integer> courseIcon) {
         context = c;
-        this.imageId = imageId;
-        this.web = web;
+        this.courseIcon = courseIcon;
+        this.courseName = courseName;
     }
 
     @Override
     public int getCount() {
-        return web.length;
+        return courseName.size();
     }
 
     @Override
@@ -50,9 +52,9 @@ public class GradeGrid extends BaseAdapter {
             ImageView courseIcon = grid.findViewById(R.id.grid_image);
             ImageView courseGradeIcon = grid.findViewById(R.id.grid_course_grade_icon);
 
-            courseName.setText(web[position]);
+            courseName.setText(this.courseName.get(position));
             courseGrade.setText("F");
-            courseIcon.setImageResource(imageId[position]);
+            courseIcon.setImageResource(this.courseIcon.get(position));
             courseGradeIcon.setImageResource((!courseGrade.getText().equals("D") || !courseGrade.getText().equals("F")) ? R.drawable.approved : R.drawable.failed);
         } else {
             grid = convertView;
