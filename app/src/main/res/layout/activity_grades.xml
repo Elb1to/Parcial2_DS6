@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".activities.GradesActivity">
 
+    <!--  Estudiante: Víctor Abrego 8-970-1354-->
+    <!--    Santiago Mutis E-8-179998-->
+    <!--    Miguel San Martín 8-960-2224-->
+
     <TextView
         android:id="@+id/grades_title"
         android:layout_width="match_parent"

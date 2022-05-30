@@ -2,17 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".activities.LoginActivity">
+
+    <!--  Estudiante: Víctor Abrego 8-970-1354-->
+    <!--    Santiago Mutis E-8-179998-->
+    <!--    Miguel San Martín 8-960-2224-->
 
     <TextView
         android:id="@+id/login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="35dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="45dp"
+        android:fontFamily="@font/robotvariable"
         android:text="Universidad Tecnologica \n de Panamá \n Facultad de Sistemas"
         android:textAlignment="center"
-        android:textSize="18dp"
+        android:textSize="15dp"
         android:textStyle="bold" />
 
     <TextView
@@ -22,8 +31,9 @@
         android:layout_below="@+id/login_title"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
+        android:fontFamily="@font/robotvariable"
         android:text="Nuevo Sistema de matricula"
-        android:textSize="18dp"
+        android:textSize="13dp"
         android:textStyle="bold" />
 
     <ImageView

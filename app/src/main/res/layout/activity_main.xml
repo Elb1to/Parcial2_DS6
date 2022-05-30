@@ -3,8 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <!--  Estudiante: Víctor Abrego 8-970-1354-->
+    <!--    Santiago Mutis E-8-179998-->
+    <!--    Miguel San Martín 8-960-2224-->
 
     <TextView
         android:id="@+id/main_get_cedula"
@@ -18,12 +23,18 @@
 
     <TextView
         android:id="@+id/main_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/robotvariable"
         android:text="Universidad Tecnologica \n de Panamá \n Facultad de Sistemas"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/main_subtitle"
@@ -31,9 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_title"
         android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
         android:text=" Seleccione su Perfil"
-        android:textSize="25sp" />
+        android:textSize="18dp" />
 
     <ImageView
         android:id="@+id/utp"
@@ -58,29 +72,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/fisc"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
         <RadioButton
             android:id="@+id/main_student_rbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+
+            android:fontFamily="@font/robotvariable"
             android:text="Sitio de Estudiante"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/main_siu_rbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotvariable"
             android:text="Sitio de Estudiante SIU"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/main_professor_rbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotvariable"
             android:text="Sitio de Profesor"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
     </RadioGroup>
 
     <Button
@@ -88,7 +105,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_rgroup"
         android:layout_centerHorizontal="true"
-        android:layout_margin="30dp"
         android:backgroundTint="@color/teal_200"
         android:onClick="selectProfileOption"
         android:text="Entrar" />
